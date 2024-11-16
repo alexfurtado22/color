@@ -1,101 +1,308 @@
-import Image from "next/image";
+import { ThemeColorToggle } from '@/components/theme-color-toggle'
+import { ThemeModeToggle } from '@/components/theme-mode-toggle'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
+        <p className='fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 text-primary backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
+          Get started by editing&nbsp;
+        </p>
+        <p className='text-2xl text-primary'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A sequi autem fugit praesentium
+          recusandae dolore.
+        </p>
+        <div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center gap-x-1 bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none'>
+          <ThemeColorToggle />
+          <ThemeModeToggle />
+        </div>
+      </div>
+
+      <div className="before:bg-gradient-radial after:bg-gradient-conic relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-primary before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
+          className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
+          src='/next.svg'
+          alt='Next.js Logo'
           width={180}
-          height={38}
+          height={37}
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p className='text-shadow-primary-accent'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+        <p className='text-shadow-muted'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore voluptatem eum,
+          molestiae, eaque exercitationem minima temporibus eos rerum numquam aperiam tempora
+          quisquam culpa ducimus? Cum iure quo ea ut, architecto unde voluptatibus magni sint natus
+          odio illum dicta esse fuga quos rem doloremque temporibus mollitia. Molestiae neque
+          tempore magni facere deleniti cumque fugiat alias delectus aperiam excepturi, maxime
+          incidunt cum totam id, impedit doloribus.
+        </p>
+      </div>
+    </main>
+  )
 }
