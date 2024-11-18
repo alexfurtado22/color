@@ -46,8 +46,8 @@ export default {
         'accent-foreground': 'hsl(var(--accent-foreground))',
         destructive: 'hsl(var(--destructive))',
         'destructive-foreground': 'hsl(var(--destructive-foreground))',
-        pink: 'oklch(var(--clr-pink))', // Added clr-pink
-        yellow: 'var(--clr-yellow)',
+        'clr-pink': 'oklch(var(--clr-pink))', // Added clr-pink
+        'clr-yellow': 'var(--clr-yellow)',
         bar: 'hsl(var(--bar))',
       },
       fontSize: {

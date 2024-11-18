@@ -32,7 +32,8 @@ export const metadata: Metadata = {
   title: 'Dynamic Colors Themes',
   description: 'Choose Your Color Theme.',
   icons: {
-    icon: '/favicon.ico', // Path to icon file in the public folder
+    icon: '/favicon.ico',
+    // Path to icon file in the public folder
   },
 }
 

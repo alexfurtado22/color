@@ -32,7 +32,7 @@
 
   /* Grid adaptation mixin */
   --grid_adapt_mixin: repeat(
-    auto-fill,
+    auto-fit,
     minmax(
       clamp(
         clamp(
